@@ -8,7 +8,7 @@
 
     <!-- iconos -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- css customizado -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -21,45 +21,91 @@
         <i class='bx bx-menu' id="menu-icon"></i>
 
         <nav class="navbar">
-            <a href="#home" class="active">Inicio</a>
-            <a href="#about">Sobre Mí</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Proyectos</a>
-            <a href="#contact">Contacto</a>
+            <a href="#home" style="--i:1;" class="active">Inicio</a>
+            <a href="#about" style="--i:2;" >Sobre Mí</a>
+            <a href="#skills" style="--i:3;" >Skills</a>
+            <a href="#projects" style="--i:4;" >Proyectos</a>
+            <a href="#contact" style="--i:5;" >Contacto</a>
         </nav>
     </header>
 
     <!-- home section design -->
     <section class="home" id="home">
         <div class="home-content">
-            <h3>Hola, Soy yo</h3>
+            <h3>Hola, Soy yo!</h3>
             <h1>Iván Becerra</h1>
             <h3>y soy <span class="multiple-text"></span></h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum amet sapiente voluptatem eos itaque ipsum repudiandae nam consectetur odio aspernatur! At nisi veniam cum atque impedit quaerat molestias nostrum perspiciatis.</p>
+            <p>Me encuentro en la búsqueda de una oportunidad laboral para desarrollarme profesionalmente y aportar con todos mis conocimientos y así ser parte de un equipo de desarrollo de soluciones TI de calidad, desarrollo de aplicaciones web y de software...</p>
             <div class="social-media">
-                <a href="#"><i class='bx bxl-linkedin' ></i></a>
-                <a href="#"><i class='bx bxl-github' ></i></a>
+                <a href="https://www.linkedin.com/in/ivan-becerra-dev/" target="_blank"><i class='bx bxl-linkedin' ></i></a>
+                <a href="https://github.com/IvanBecerraA" target="_blank"><i class='bx bxl-github' ></i></a>
             </div>
-            <a href="#" class="btn">Descargar CV</a>
+            <a download="CV Ivan Becerra" href="cv/CV Ivan Becerra.pdf" class="btn"><i class='bx bxs-cloud-download'></i> Descargar CV</a>
         </div>
 
         <div class="home-img">
-            <img src="img/home-1.png" alt="">
-        </div>
+            <div class="img-box">
+                <img src="img/home-1.png" alt="">
+            </div>
 
+            <div class="liquid-shape">
+                <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+                    <path fill="#00cec9">
+                        <animate attributeName="d"
+                        dur="10000ms"
+                        repeatCount="indefinite"
+                        values="
+                        M438,300Q405,350,377,408Q349,466,285.5,454.5Q222,443,157,438Q92,433,90.5,365Q89,297,86.5,249Q84,201,104,152.5Q124,104,176,102Q228,100,273.5,99.5Q319,99,361,125.5Q403,152,437,201Q471,250,438,300Z;
+                        M423.5,292Q381,334,359.5,388.5Q338,443,283,424Q228,405,187,387.5Q146,370,96,340Q46,310,69.5,257Q93,204,113.5,160Q134,116,177.5,82.5Q221,49,274,65.5Q327,82,355,123Q383,164,424.5,207Q466,250,423.5,292Z;
+                        M455.5,315Q453,380,393.5,407.5Q334,435,281,420Q228,405,181,394.5Q134,384,88,347.5Q42,311,45.5,251Q49,191,92,154Q135,117,177.5,80Q220,43,278.5,51.5Q337,60,397,88.5Q457,117,457.5,183.5Q458,250,455.5,315Z;
+                        M462,316.5Q457,383,398.5,415Q340,447,281.5,441Q223,435,168.5,420.5Q114,406,72.5,360Q31,314,23.5,247.5Q16,181,56,126.5Q96,72,158.5,59Q221,46,274,63Q327,80,355,122.5Q383,165,425,207.5Q467,250,462,316.5Z;
+                        M401,292Q380,334,347.5,363.5Q315,393,270.5,406Q226,419,172.5,410Q119,401,80.5,356Q42,311,72.5,259Q103,207,111,153Q119,99,171,79.5Q223,60,281,58Q339,56,392.5,90Q446,124,434,187Q422,250,401,292Z;
+                        M464,310Q437,370,379.5,389Q322,408,268.5,452Q215,496,176.5,437.5Q138,379,105.5,340.5Q73,302,78,251.5Q83,201,103.5,153Q124,105,169,54Q214,3,280,22Q346,41,391.5,85.5Q437,130,464,190Q491,250,464,310Z;
+                        M397,292.5Q382,335,355,377.5Q328,420,274.5,435Q221,450,179,415Q137,380,110,339.5Q83,299,86.5,251Q90,203,89,133Q88,63,157.5,76Q227,89,270.5,99.5Q314,110,355.5,133Q397,156,404.5,203Q412,250,397,292.5Z;
+                        M398.5795,293.553Q385.15899,337.10599,348.68202,361.70505Q312.20505,386.30411,264.49653,433.947Q216.78801,481.5899,173.73502,435.00694Q130.68202,388.42397,85.25458,350.02997Q39.82714,311.63596,24.89969,245.73502Q9.97225,179.83407,78.47003,155.63943Q146.96782,131.44479,186.45741,107.5899Q225.947,83.73502,269.9735,96.86751Q314,110,346.54953,138.26498Q379.09906,166.52997,395.54953,208.26498Q412,250,398.5795,293.553Z;
+                        M438,300Q405,350,377,408Q349,466,285.5,454.5Q222,443,157,438Q92,433,90.5,365Q89,297,86.5,249Q84,201,104,152.5Q124,104,176,102Q228,100,273.5,99.5Q319,99,361,125.5Q403,152,437,201Q471,250,438,300Z;
+                        "></animate>
+                    </path>
+                </svg>
+            </div>
+            <div class="liquid-shape">
+                <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+                    <path fill="#00cec9">
+                        <animate attributeName="d"
+                        dur="10000ms"
+                        repeatCount="indefinite"
+                        values="
+                        M438,300Q405,350,377,408Q349,466,285.5,454.5Q222,443,157,438Q92,433,90.5,365Q89,297,86.5,249Q84,201,104,152.5Q124,104,176,102Q228,100,273.5,99.5Q319,99,361,125.5Q403,152,437,201Q471,250,438,300Z;
+                        M423.5,292Q381,334,359.5,388.5Q338,443,283,424Q228,405,187,387.5Q146,370,96,340Q46,310,69.5,257Q93,204,113.5,160Q134,116,177.5,82.5Q221,49,274,65.5Q327,82,355,123Q383,164,424.5,207Q466,250,423.5,292Z;
+                        M455.5,315Q453,380,393.5,407.5Q334,435,281,420Q228,405,181,394.5Q134,384,88,347.5Q42,311,45.5,251Q49,191,92,154Q135,117,177.5,80Q220,43,278.5,51.5Q337,60,397,88.5Q457,117,457.5,183.5Q458,250,455.5,315Z;
+                        M462,316.5Q457,383,398.5,415Q340,447,281.5,441Q223,435,168.5,420.5Q114,406,72.5,360Q31,314,23.5,247.5Q16,181,56,126.5Q96,72,158.5,59Q221,46,274,63Q327,80,355,122.5Q383,165,425,207.5Q467,250,462,316.5Z;
+                        M401,292Q380,334,347.5,363.5Q315,393,270.5,406Q226,419,172.5,410Q119,401,80.5,356Q42,311,72.5,259Q103,207,111,153Q119,99,171,79.5Q223,60,281,58Q339,56,392.5,90Q446,124,434,187Q422,250,401,292Z;
+                        M464,310Q437,370,379.5,389Q322,408,268.5,452Q215,496,176.5,437.5Q138,379,105.5,340.5Q73,302,78,251.5Q83,201,103.5,153Q124,105,169,54Q214,3,280,22Q346,41,391.5,85.5Q437,130,464,190Q491,250,464,310Z;
+                        M397,292.5Q382,335,355,377.5Q328,420,274.5,435Q221,450,179,415Q137,380,110,339.5Q83,299,86.5,251Q90,203,89,133Q88,63,157.5,76Q227,89,270.5,99.5Q314,110,355.5,133Q397,156,404.5,203Q412,250,397,292.5Z;
+                        M398.5795,293.553Q385.15899,337.10599,348.68202,361.70505Q312.20505,386.30411,264.49653,433.947Q216.78801,481.5899,173.73502,435.00694Q130.68202,388.42397,85.25458,350.02997Q39.82714,311.63596,24.89969,245.73502Q9.97225,179.83407,78.47003,155.63943Q146.96782,131.44479,186.45741,107.5899Q225.947,83.73502,269.9735,96.86751Q314,110,346.54953,138.26498Q379.09906,166.52997,395.54953,208.26498Q412,250,398.5795,293.553Z;
+                        M438,300Q405,350,377,408Q349,466,285.5,454.5Q222,443,157,438Q92,433,90.5,365Q89,297,86.5,249Q84,201,104,152.5Q124,104,176,102Q228,100,273.5,99.5Q319,99,361,125.5Q403,152,437,201Q471,250,438,300Z;
+                        "></animate>
+                    </path>
+                </svg>
+            </div>
+        </div>
     </section>
 
     <!-- about section design -->
     <section class="about" id="about">
         <div class="about-img">
-            <img src="img/home.jpg" alt="">
+            <img src="img/about-1.png" alt="">
         </div>
 
         <div class="about-content">
             <h2 class="heading">Sobre <span>Mí</span></h2>
             <h3>Backend Developer!</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus facere molestiae eveniet fugit culpa atque voluptas laborum iure esse neque? Officiis quibusdam culpa accusantium fuga perspiciatis sint debitis expedita quia?</p>
-            <a href="#" class="btn">Leer más</a>
+            <p>Ingeniero en informática con dos años de experiencia en el desarrollo, especializado en Java/Spring.</p>
+            <p>Mi formación academica consta de la universidad, bootcamp y cursos autodidactas en Udemy y Youtube</p>
+            <p>Tengo conocimientos avanzados en planificación de proyectos, diseño, desarrollo, test, mantenimiento y desarrollo ágil.</p>
+            <p>Soy un apasionado de la programación, autónomo, proactivo y comunicativo.</p>
+            <p>Estoy deseoso de crear soluciones tecnológicas aportando con mis conocimientos y aptitudes.</p>
+            <a href="#contact" class="btn">Saber más</a>
         </div>
     </section>
 
@@ -69,18 +115,85 @@
         <h2 class="heading">Mis <span>Habilidades</span></h2>
 
         <div class="skills-container">
-            <div class="skills-box">
+            <div class="skills-box skills-box-tec">
                 <i class='bx bx-code-alt' ></i>
                 <h3>Habilidades Técnicas</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae ex eaque doloremque odio nobis! Enim mollitia explicabo deleniti temporibus dolore, amet pariatur provident nisi repellat rem quo velit quam. Earum?</p>
-                <a href="#" class="btn">Leer más</a>
+                <div class="contenedor-skills">
+                    <div class="skills">
+                        <i class='bx bxl-java' ></i>
+                        <span>Java</span>
+                    </div>
+                    <div class="skills">
+                        <i class='bx bxl-spring-boot' ></i>
+                        <span>Spring boot</span>
+                    </div>
+                    <div class="skills">
+                        <i class='bx bxl-angular' ></i>
+                        <span>Angular</span>
+                    </div>
+                    <div class="skills">
+                        <i class='bx bxl-javascript' ></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skills">
+                        <i class='bx bxl-css3' ></i>
+                        <span>CSS</span>
+                    </div>
+                    <div class="skills">
+                        <i class='bx bxl-html5' ></i>
+                        <span>HTML</span>
+                    </div>
+                    <div class="skills">
+                        <i class='bx bxl-bootstrap' ></i>
+                        <span>Bootstrap</span>
+                    </div>
+                    <div class="skills">
+                        <i class='bx bxl-python' ></i>
+                        <span>Python</span>
+                    </div>
+                    <div class="skills">
+                        <i class='bx bxl-git'></i>
+                        <span>Git</span>
+                    </div>
+                    <div class="skills">
+                        <i class='bx bxl-github'></i>
+                        <span>GitHub</span>
+                    </div>
+                    <div class="skills">
+                        <i class='bx bxl-postgresql'></i>
+                        <span>PostgreSQL</span>
+                    </div>
+                    <div class="skills">
+                        <i class='bx bxl-firebase' ></i>
+                        <span>Firebase</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="skills-box">
+            <div class="skills-box skills-box-blan">
                 <i class='bx bx-brain' ></i>
                 <h3>Habilidades Blandas</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae ex eaque doloremque odio nobis! Enim mollitia explicabo deleniti temporibus dolore, amet pariatur provident nisi repellat rem quo velit quam. Earum?</p>
-                <a href="#" class="btn">Leer más</a>
+                <div class="contenedor-skills">
+                    <div class="skills">
+                        <span>Autodidacta</span>
+                    </div>
+                    <div class="skills">
+                        <span>Proactivo</span>
+                    </div>
+                    <div class="skills">
+                        <span>Comunicativo</span>
+                    </div> 
+                    <div class="skills">
+                        <span>Comprometido</span>
+                    </div>
+                    <div class="skills">
+                        <span>Dedicado</span>
+                    </div>
+                    <div class="skills">
+                        <span>Productivo</span>
+                    </div>
+                </div>
+            
             </div>
         </div>
     </section>
@@ -91,55 +204,55 @@
 
         <div class="projects-container">
             <div class="projects-box">
-                <img src="img/p1.png" alt="">
+                <img src="img/project-2.png" alt="">
                 <div class="projects-layer">
-                    <h4>Web Desing</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, aperiam.</p>
+                    <h4>Sistema de remuneraciones</h4>
+                    <p>Aplicación web para empleadores y contadores para la gestión de liquidaciones</p>
+                    <a target="_blank" href="https://github.com/IvanBecerraA/SprintBootcampModulo6"><i class='bx bxl-github' ></i></a>
+                </div>
+            </div>
+
+            <div class="projects-box">
+                <img src="img/project-1.png" alt="">
+                <div class="projects-layer">
+                    <h4>SEO RyO</h4>
+                    <p>Diseño web de página estática para agencia de SEO</p>
+                    <a target="_blank" href="https://ivanbecerraa.github.io/TopSEO/"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="projects-box">
+                <img src="img/project-3.jpg" alt="">
+                <div class="projects-layer">
+                    <h4>Trabajando en próximos proyectos</h4>
+                    <p>...</p>
                     <a href="#"><i class='bx bx-link-external'></i></a>
                 </div>
             </div>
 
             <div class="projects-box">
-                <img src="img/p2.jpeg" alt="">
+                <img src="img/project-4.png" alt="">
                 <div class="projects-layer">
-                    <h4>Web Desing</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, aperiam.</p>
+                    <h4>Trabajando en próximos proyectos</h4>
+                    <p>...</p>
                     <a href="#"><i class='bx bx-link-external'></i></a>
                 </div>
             </div>
 
             <div class="projects-box">
-                <img src="img/p3.jfif" alt="">
+                <img src="img/project-4.png" alt="">
                 <div class="projects-layer">
-                    <h4>Web Desing</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, aperiam.</p>
+                    <h4>Trabajando en próximos proyectos</h4>
+                    <p>...</p>
                     <a href="#"><i class='bx bx-link-external'></i></a>
                 </div>
             </div>
 
             <div class="projects-box">
-                <img src="img/p1.png" alt="">
+                <img src="img/project-4.png" alt="">
                 <div class="projects-layer">
-                    <h4>Web Desing</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, aperiam.</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
-
-            <div class="projects-box">
-                <img src="img/p2.jpeg" alt="">
-                <div class="projects-layer">
-                    <h4>Web Desing</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, aperiam.</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
-
-            <div class="projects-box">
-                <img src="img/p3.jfif" alt="">
-                <div class="projects-layer">
-                    <h4>Web Desing</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, aperiam.</p>
+                    <h4>Trabajando en próximos proyectos</h4>
+                    <p>...</p>
                     <a href="#"><i class='bx bx-link-external'></i></a>
                 </div>
             </div>
@@ -150,17 +263,19 @@
     <section class="contact" id="contact">
         <h2 class="heading">Mi <span>Contacto</span></h2>
 
-        <form action="#">
+        <form action="https://formsubmit.co/ivanbecerradev@gmail.com" method="POST">
             <div class="input-box">
-                <input type="text" placeholder="Nombre">
-                <input type="email" placeholder="Correo">
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="email" name="correo" placeholder="Correo" required>
             </div>
             <div class="input-box">
-                <input type="number" placeholder="Teléfono">
-                <input type="text" placeholder="Asunto">
+                <input type="number" name="telefono" placeholder="Teléfono">
+                <input type="text" name="asunto" placeholder="Asunto" required>
             </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
-            <input type="submit" value="Enviar Mensaje" class="btn">
+            <textarea name="mensaje" cols="30" rows="10" placeholder="Mensaje" required></textarea>
+            <button type="submit" class="btn">Enviar Mensaje</button>
+            <input type="hidden" name="_next" value="https://ivanbecerraa.github.io/Portafolio/">
+            <input type="hidden" name="_captcha" value="false">
         </form>
     </section>
     

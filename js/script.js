@@ -40,15 +40,16 @@ window.onscroll = () => {
 /*==================== scroll reveal ====================*/
 ScrollReveal({ 
     //reset: true,
-    distance: '80px',
+    distance: '200px',
     duration: 2000,
-    delay: 200
+    delay: 300
 });
 
 ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-ScrollReveal().reveal('.home-img, .skills-container, .projects-box, .contact form', { origin: 'bottom' });
-ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
-ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
+ScrollReveal().reveal('.home-img, .projects-box, .contact form', { origin: 'bottom' });
+ScrollReveal().reveal('.home-content h1, .about-img, .logo, .skills-box-tec', { origin: 'left' });
+ScrollReveal().reveal('.home-content p, .about-content, .skills-box-blan', { origin: 'right' });
+
 
 /*==================== typed js ====================*/
 const typed = new Typed('.multiple-text', {

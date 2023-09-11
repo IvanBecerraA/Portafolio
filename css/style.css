@@ -58,16 +58,30 @@ section {
 }
 
 .navbar a {
+    display: inline-block;
     font-size: 1.7rem;
     color: var(--text-color);
     margin-left: 4rem;
     transition: .3s;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+    opacity: 0;
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .navbar a:hover,
 .navbar a.active {
     color: var(--main-color);
-
 }
 
 #menu-icon {
@@ -82,26 +96,28 @@ section {
     align-items: center;
 }
 
-.home-img img {
-    /* width: 35vw; */
-    width: 20vw;
-    animation: floatImage 4s ease-in-out infinite;
-    /* height: 30vw; */
-    /* border-radius: 15rem;
-    box-shadow: 0 0 20px var(--main-color),
-    0 0 50px var(--main-color); */
+.home-img {
+    position: relative;
 }
 
-@keyframes floatImage {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-2.4rem);
-    }
-    100% {
-        transform: translateY(0);
-    }
+.img-box {
+    text-align: center;
+}
+
+.liquid-shape {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 10%;
+}
+
+.liquid-shape:nth-child(2) {
+    filter: blur(50px);
+}
+
+.home-img img {
+    width: 35vw;
 }
 
 .home-content h3 {
@@ -150,6 +166,7 @@ span {
 
 .btn {
     display: inline-block;
+    text-align: center;
     padding: 1rem 2.8rem;
     background: var(--main-color);
     border-radius: 4rem;
@@ -160,10 +177,15 @@ span {
     font-weight: 600;
 }
 
+.btn i {
+    font-size: 1.6rem;
+}
+
 .btn:hover {
     box-shadow: none;
 }
 
+/* about section design */
 .about {
     display: flex;
     justify-content: center;
@@ -173,10 +195,8 @@ span {
 }
 
 .about-img img{
-    width: 20vw;
-    border-radius: 15rem;
-    box-shadow: 0 0 20px var(--main-color),
-    0 0 50px var(--main-color);
+    width: 30vw;
+    animation: floatImage 4s ease-in-out infinite;
 }
 
 .heading {
@@ -195,7 +215,11 @@ span {
 
 .about-content p {
     font-size: 1.6rem;
-    margin: 2rem 0 3rem;
+    margin: 1rem 0 1rem;
+}
+
+.about-content a {
+    margin-top: 2rem;
 }
 
 /* skills section design */
@@ -212,13 +236,14 @@ span {
 }
 
 .skills-container .skills-box {
-    flex: 1 1 30rem;
+    flex: 1 1 35rem;
     background: var(--second-bg-color);
     padding: 3rem 2rem 4rem;
     border-radius: 2rem;
     text-align: center;
     border: .2rem solid var(--bg-color);
     transition: .5s ease;
+    height: 550px;
 }
 
 .skills-container .skills-box:hover {
@@ -233,11 +258,48 @@ span {
 
 .skills-box h3 {
     font-size: 2.6rem;
+    margin-bottom: 3rem;
 }
 
-.skills-box p {
-    font-size: 1.6rem;
-    margin: 1rem 0 3rem;
+.contenedor-skills{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skills .skills-box-tec .skills{
+    width: 100px;
+    height: 100px;
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    margin: auto 15px 15px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+}
+
+.skills .skills-box-tec .skills:hover,
+.skills .skills-box-blan .skills:hover { 
+    transform: scale(1.1);
+    box-shadow: 0 0 15px var(--main-color);
+}
+
+.skills .skills-box-blan .skills{
+    width: 100px;
+    height: 100px;
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    margin: auto 15px 15px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+}
+
+.skills-box-blan span {
+    font-size: 1.2rem;
 }
 
 /* projects section design */
@@ -279,7 +341,7 @@ span {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
+    background: linear-gradient(rgba(0, 0, 0, .3), var(--main-color));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -394,7 +456,31 @@ span {
     color: var(--second-bg-color);
 }
 
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2.4rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 /* BreakPoints */
+@media (max-width: 1255px) { 
+    .skills .skills-box-tec .skills{
+        width: 80px;
+        height: 80px;
+    }
+    .skills .skills-box-blan .skills{
+        width: 80px;
+        height: 80px;
+    }
+}
+
+
 @media (max-width: 1200px) {
     html {
         font-size: 55%;
@@ -410,12 +496,16 @@ span {
         padding: 10rem 3% 2rem;
     }
 
-    .skills {
+    #skills {
         padding-bottom: 7rem;
     }
 
     .projects {
         padding-bottom: 7rem;
+    }
+
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .contact {
@@ -467,8 +557,7 @@ span {
     }
 
     .home-img img{
-
-        height: 50vw;
+        width: 50vw;
         margin-top: 4rem;
     }
 
@@ -485,18 +574,48 @@ span {
         margin-bottom: 3rem;
     }
 
+    .skills .skills-box-tec .skills{
+        width: 70px;
+        height: 70px;
+    }
+
     .projects h2 {
         margin-bottom: 3rem;
     }
 
-    .projects-container {
-        grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 673px) {
+    .skills .skills-box-tec .skills{
+        width: 110px;
+        height: 110px;
+    }
+    .skills .skills-box-blan .skills{
+        width: 140px;
+        height: 140px;
+    }
+    .skills-box-blan span {
+        font-size: 1.9rem;
     }
 }
 
 @media (max-width: 617px) {
     .projects-container {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 573px) {
+    .skills .skills-box-tec .skills{
+        width: 90px;
+        height: 90px;
+    }
+    .skills .skills-box-blan .skills{
+        width: 100px;
+        height: 100px;
+    }
+    .skills-box-blan span {
+        font-size: 1.4rem;
     }
 }
 
@@ -507,6 +626,17 @@ span {
 
     .contact form .input-box input {
         width: 100%;
+    }
+}
+
+@media (max-width: 373px) {
+    .skills .skills-box-tec .skills{
+        width: 70px;
+        height: 70px;
+    }
+    .skills .skills-box-blan .skills{
+        width: 90px;
+        height: 90px;
     }
 }
 
