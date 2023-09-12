@@ -58,3 +58,55 @@ const typed = new Typed('.multiple-text', {
     backDelay: 1000,
     loop: true
 });
+
+
+/*==================== Cambio de colores ====================*/
+let celeste = document.querySelector(".celeste a");
+let morado = document.querySelector(".morado a");
+let amarillo = document.querySelector(".amarillo a");
+let naranjo = document.querySelector(".naranjo a");
+const root = document.documentElement;
+const imgAbout = document.querySelector(".about-img img");
+
+celeste.addEventListener('click', () => {
+    root.style.setProperty('--main-color', '#0ef');
+    imgAbout.src = 'img/about-1.png';
+});
+
+morado.onclick = () => {
+    root.style.setProperty('--main-color', 'rgb(98, 0, 255)');
+    // root.style.setProperty('--bg-color', '#fff');
+    // root.style.setProperty('--second-bg-color', '#ccc');
+    // root.style.setProperty('--text-color', '#000');
+    imgAbout.src = 'img/about-2.png';
+}
+
+amarillo.addEventListener('click', () => {
+    root.style.setProperty('--main-color', 'rgb(229, 255, 0)');
+    imgAbout.src = 'img/about-3.png';
+});
+
+naranjo.onclick = () => {
+    root.style.setProperty('--main-color', 'rgb(255, 145, 0)');
+    imgAbout.src = 'img/about-4.png';
+}
+
+
+/*==================== dark mode ====================*/
+let sun = document.querySelector('#sun');
+
+sun.onclick = () => {
+    if (sun.classList.contains('bx-sun')) {
+        sun.classList.remove('bx-sun');
+        sun.classList.add('bx-moon');
+        root.style.setProperty('--bg-color', '#fff');
+        root.style.setProperty('--second-bg-color', 'rgb(242, 246, 247)');
+        root.style.setProperty('--text-color', '#000');
+    } else {
+        sun.classList.remove('bx-moon');
+        sun.classList.add('bx-sun');
+        root.style.setProperty('--bg-color', '#1f242d');
+        root.style.setProperty('--second-bg-color', '#323946');
+        root.style.setProperty('--text-color', '#fff');
+    }
+}

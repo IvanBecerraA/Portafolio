@@ -130,6 +130,7 @@ section {
 }
 
 span {
+    transition: 0.5s;
     color: var(--main-color);
 }
 
@@ -175,6 +176,7 @@ span {
     color: var(--second-bg-color);
     letter-spacing: .1rem;
     font-weight: 600;
+    transition: .5s;
 }
 
 .btn i {
@@ -254,6 +256,7 @@ span {
 .skills-box i {
     font-size: 7rem;
     color: var(--main-color);
+    transition: .5s;
 }
 
 .skills-box h3 {
@@ -466,6 +469,95 @@ span {
     100% {
         transform: translateY(0);
     }
+}
+
+/* Cambiar color */
+.liquid-shape-color {
+    fill: var(--main-color) !important;
+    transition: 1s;
+}
+
+.colores {
+    display: inline-flex;
+}
+
+.celeste a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    border: .2rem solid #0ef;
+    color: #0ef;
+    margin-left: 10px;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+.morado a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    border: .2rem solid rgb(98, 0, 255);
+    color: rgb(98, 0, 255);
+    margin-left: 10px;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+.amarillo a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    border: .2rem solid rgb(229, 255, 0);
+    color: rgb(229, 255, 0);
+    margin-left: 10px;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+.naranjo a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    border: .2rem solid rgb(255, 145, 0);
+    color: rgb(255, 145, 0);
+    margin-left: 10px;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+/* Dark mode */
+.dark-mode {
+    display: inline-flex;
+}
+.dark-mode a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    border: .2rem solid var(--text-color);
+    color: var(--text-color);
+    margin-left: 10px;
+    transition: .5s ease;
+    cursor: pointer;
 }
 
 /* BreakPoints */
