@@ -63,7 +63,7 @@ const typed = new Typed('.multiple-text', {
 /*==================== Cambio de colores ====================*/
 let celeste = document.querySelector(".celeste a");
 let morado = document.querySelector(".morado a");
-let amarillo = document.querySelector(".amarillo a");
+// let amarillo = document.querySelector(".amarillo a");
 let naranjo = document.querySelector(".naranjo a");
 const root = document.documentElement;
 const imgAbout = document.querySelector(".about-img img");
@@ -81,10 +81,10 @@ morado.onclick = () => {
     imgAbout.src = 'img/about-2.png';
 }
 
-amarillo.addEventListener('click', () => {
-    root.style.setProperty('--main-color', 'rgb(229, 255, 0)');
-    imgAbout.src = 'img/about-3.png';
-});
+// amarillo.addEventListener('click', () => {
+//     root.style.setProperty('--main-color', 'rgb(229, 255, 0)');
+//     imgAbout.src = 'img/about-3.png';
+// });
 
 naranjo.onclick = () => {
     root.style.setProperty('--main-color', 'rgb(255, 145, 0)');

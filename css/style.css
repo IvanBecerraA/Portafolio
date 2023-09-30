@@ -511,7 +511,7 @@ span {
     cursor: pointer;
 }
 
-.amarillo a {
+/* .amarillo a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -524,7 +524,7 @@ span {
     margin-left: 10px;
     transition: .5s ease;
     cursor: pointer;
-}
+} */
 
 .naranjo a {
     display: inline-flex;
